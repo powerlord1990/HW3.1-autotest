@@ -1,3 +1,5 @@
+package ru.itpark;
+
 public class TaxiService {
     double submissionCost = 60;
     double kmCost = 20;
