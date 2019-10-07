@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaxiServiceTest {
 
     @Test
-    @DisplayName("Should calculated price")
+    @DisplayName("Must be calculated price")
     void calculatePrice() {
 
         var service = new TaxiService();
@@ -19,7 +19,7 @@ class TaxiServiceTest {
     }
 
     @Test
-    @DisplayName("Should max limit")
+    @DisplayName("Must be calculated max discount")
     void calculateMaxDiscount() {
         var service = new TaxiService();
         var result = service.pricePerTrip(100);
