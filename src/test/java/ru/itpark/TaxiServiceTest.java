@@ -8,22 +8,29 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaxiServiceTest {
 
     @Test
-    @DisplayName("Must be calculated price")
+    @DisplayName("Must be calculated without discount")
     void calculatePrice() {
-
         var service = new TaxiService();
-        var result = service.pricePerTrip(3);
+        var result = service.pricePerTrip(5);
+        assertEquals(160, result);
+    }
 
-
-        assertEquals(120, result);
+    @Test
+    @DisplayName("Must be calculated with discount")
+    void calculateWithDiscount() {
+        var service = new TaxiService();
+        var result = service.pricePerTrip(50);
+        assertEquals(1007, result);
     }
 
     @Test
     @DisplayName("Must be calculated max discount")
-    void calculateMaxDiscount() {
+    void calculateWithMaxDiscount() {
         var service = new TaxiService();
         var result = service.pricePerTrip(100);
         assertEquals(1960, result);
 
     }
+
+
 }
