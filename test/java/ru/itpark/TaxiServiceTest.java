@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaxiServiceTest {
 
     @Test
-    @DisplayName("Should calculated price")
+    @DisplayName("Must calculate the price")
     void calculatePrice() {
 
         var service = new TaxiService();
